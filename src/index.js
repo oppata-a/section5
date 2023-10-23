@@ -4,7 +4,7 @@ const onClickAdd = () => {
   //テキストボックスの値を取得し、初期化する
   const inputText = document.getElementById("add-text").value;
   if (inputText == "") {
-    alert("TODOを入力してください");
+    alert("TODOを入力してください!");
   } else {
     document.getElementById("add-text").value = "";
     createIncompleteList(inputText);
