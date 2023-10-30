@@ -1,5 +1,6 @@
 import "./styles.css";
 
+//追加ボタンをクリックしたときに呼ばれる関数
 const onClickAdd = () => {
   //テキストボックスの値を取得し、初期化する
   const inputText = document.getElementById("add-text").value;
@@ -7,6 +8,7 @@ const onClickAdd = () => {
     alert("TODOを入力してください");
   } else {
     document.getElementById("add-text").value = "";
+    //未完了リストに追加する
     createIncompleteList(inputText);
   }
 };
@@ -38,6 +40,7 @@ const createIncompleteList = (text) => {
 
     //完了リストに追加するdivタグ要素
     const addTarget = completeButton.parentNode;
+    console.log(addTarget);
 
     //TODO内容テキストを取得
     const text = addTarget.firstElementChild.innerText;
@@ -60,6 +63,7 @@ const createIncompleteList = (text) => {
 
       //未完了リストに追加するdivタグ要素
       const backTarget = backButton.parentNode;
+      console.log(backButton.parentNode);
 
       //TODO内容テキストを取得
       const text = backTarget.firstElementChild.innerText;
@@ -97,6 +101,7 @@ const createIncompleteList = (text) => {
   document.getElementById("incomplete-list").appendChild(li);
 };
 
+//追加ボタンをクリックしたときに発生するイベント
 document
   .getElementById("add-button")
   .addEventListener("click", () => onClickAdd());
