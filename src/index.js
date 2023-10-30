@@ -40,7 +40,7 @@ const createIncompleteList = (text) => {
 
     //完了リストに追加するdivタグ要素
     const addTarget = completeButton.parentNode;
-    console.log(addTarget);
+    // console.log(addTarget);
 
     //TODO内容テキストを取得
     const text = addTarget.firstElementChild.innerText;
@@ -63,7 +63,7 @@ const createIncompleteList = (text) => {
 
       //未完了リストに追加するdivタグ要素
       const backTarget = backButton.parentNode;
-      console.log(backButton.parentNode);
+      // console.log(backButton.parentNode);
 
       //TODO内容テキストを取得
       const text = backTarget.firstElementChild.innerText;
